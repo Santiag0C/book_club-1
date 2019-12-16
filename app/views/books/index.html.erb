@@ -1,0 +1,12 @@
+<h1 align="center"><font color="green">All Songs</font></h1>
+<br>
+
+<% @books.each do |book| %>
+  <section id = 'book-<%= book.id %>'>
+    <h2><font color="tomato">Title:</font> <%= book.title %></h2>
+    <h4><font color="tomato">Pages:</font> <%= book.pages %></h4>
+    <h4><font color="tomato">Publication year:</font> <%= book.publication_year %></h4>
+    <h4><font color="tomato">Author:</font> <%=link_to book.authors[0].name, "/authors/#{book.authors[0].id}" %></h4>
+    <br>
+  </section>
+<% end %>

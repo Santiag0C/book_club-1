@@ -1,0 +1,8 @@
+
+<h2> <%= @author.name %></h2>
+<% @authors_books.each do |author_book| %>
+  <ul>
+    <li style="color:MediumSeaGreen;"><%= author_book.title %></li>
+  </ul>
+<% end %>
+<h3><font color="tomato">Average number of pages for all books:</font> <%= @average %></h3>
